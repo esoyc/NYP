@@ -28,8 +28,13 @@ class Araba
 
     public void Ac()
     {
-        Console.WriteLine($"{Marka} bilgisayar aciliyor.");
+        Console.WriteLine($"{Marka} araba calisiyor.");
         motor.Calistir();
+    }
+    public void BilgileriGoster()
+    {
+        Console.WriteLine($"Motor: {motor.Model}");
+        Console.WriteLine($"Beygir gucu: {motor.BeygirGucu}");
     }
 }
 
@@ -38,6 +43,8 @@ class Program
     static void Main()
     {
         Araba araba1 = new Araba("Toyota", "1.5L Dynamic Force", 125);
+        araba1.BilgileriGoster();
+        Console.WriteLine();
         araba1.Ac();
     }
 }
